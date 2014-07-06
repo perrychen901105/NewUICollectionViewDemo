@@ -21,6 +21,7 @@
 		2C8550361969A411006A5028 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8550181969A411006A5028 /* UIKit.framework */; };
 		2C85503E1969A411006A5028 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C85503C1969A411006A5028 /* InfoPlist.strings */; };
 		2C8550401969A411006A5028 /* Flickr_SearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C85503F1969A411006A5028 /* Flickr_SearchTests.m */; };
+		2C85504A1969AC67006A5028 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8550491969AC67006A5028 /* Assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2C85503B1969A411006A5028 /* Flickr SearchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Flickr SearchTests-Info.plist"; sourceTree = "<group>"; };
 		2C85503D1969A411006A5028 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C85503F1969A411006A5028 /* Flickr_SearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flickr_SearchTests.m; sourceTree = "<group>"; };
+		2C8550491969AC67006A5028 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				2C8550261969A411006A5028 /* Main.storyboard */,
 				2C8550291969A411006A5028 /* ViewController.h */,
 				2C85502A1969A411006A5028 /* ViewController.m */,
+				2C8550491969AC67006A5028 /* Assets */,
 				2C85502C1969A411006A5028 /* Images.xcassets */,
 				2C85501B1969A411006A5028 /* Supporting Files */,
 			);
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C85502D1969A411006A5028 /* Images.xcassets in Resources */,
+				2C85504A1969AC67006A5028 /* Assets in Resources */,
 				2C85501F1969A411006A5028 /* InfoPlist.strings in Resources */,
 				2C8550281969A411006A5028 /* Main.storyboard in Resources */,
 			);
@@ -381,6 +385,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flickr Search/Flickr Search-Prefix.pch";
 				INFOPLIST_FILE = "Flickr Search/Flickr Search-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,6 +399,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Flickr Search/Flickr Search-Prefix.pch";
 				INFOPLIST_FILE = "Flickr Search/Flickr Search-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
