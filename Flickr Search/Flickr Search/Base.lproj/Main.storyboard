@@ -45,10 +45,27 @@
                                 <rect key="frame" x="36" y="102" width="697" height="13"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JPp-O7-DaY">
+                                <rect key="frame" x="0.0" y="123" width="768" height="881"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o37-ds-KN6">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9zz-wZ-Xsh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ONC-J5-eng"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="JPp-O7-DaY" id="GFo-Rv-LYT"/>
                         <outlet property="shareButton" destination="g6g-Bz-YlQ" id="RKl-Ya-uvx"/>
                         <outlet property="textField" destination="OAA-Ri-7M6" id="aFp-6c-Q6B"/>
                         <outlet property="toolbar" destination="ifQ-Ws-0hr" id="ihF-CO-PBL"/>

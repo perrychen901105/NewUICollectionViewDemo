@@ -9,7 +9,7 @@
 #import "Flickr.h"
 #import "FlickrPhoto.h"
 
-#define kFlickrAPIKey @"d02c877c0a4220890f14fc95f8b16983"
+#define kFlickrAPIKey @"c4ae9fd280b17a83328888e52957191f"
 //@"d02c877c0a4220890f14fc95f8b16983"
 //@"ca67930cac5beb26a884237fd9772402"
 @implementation Flickr
@@ -17,7 +17,7 @@
 + (NSString *)flickrSearchURLForSearchTerm:(NSString *) searchTerm
 {
     searchTerm = [searchTerm stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&text=%@&per_page=20&format=json&nojsoncallback=1",kFlickrAPIKey,searchTerm];
+    return [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&text=%@&per_page=20&format=json&nojsoncallback=1",kFlickrAPIKey,searchTerm];
 }
 
 + (NSString *)flickrPhotoURLForFlickrPhoto:(FlickrPhoto *) flickrPhoto size:(NSString *) size
@@ -33,7 +33,7 @@
 {
     NSString *searchURL = [Flickr flickrSearchURLForSearchTerm:term];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    
+    NSLog(@"search url is %@",searchURL);
     dispatch_async(queue, ^{
         NSError *error = nil;
         NSString *searchResultString = [NSString stringWithContentsOfURL:[NSURL URLWithString:searchURL]
