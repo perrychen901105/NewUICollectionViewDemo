@@ -51,11 +51,70 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="o37-ds-KN6">
                                     <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="90"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCell" id="Bqv-2X-OpQ" customClass="FlickrPhotoCell">
+                                        <rect key="frame" x="0.0" y="90" width="300" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLe-WP-G0n">
+                                                    <rect key="frame" x="25" y="25" width="250" height="250"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pushpin.png" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-db-jRW">
+                                                    <rect key="frame" x="75" y="0.0" width="150" height="46"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="o6X-jE-wci"/>
+                                                        <constraint firstAttribute="height" constant="46" id="utE-yo-S6h"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="pLe-WP-G0n" secondAttribute="bottom" constant="25" id="2RR-C2-Cat"/>
+                                            <constraint firstAttribute="trailing" secondItem="pLe-WP-G0n" secondAttribute="trailing" constant="25" id="D3S-3W-WOs"/>
+                                            <constraint firstItem="pLe-WP-G0n" firstAttribute="leading" secondItem="Bqv-2X-OpQ" secondAttribute="leading" constant="25" id="Iso-sW-GV0"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="pLe-WP-G0n" secondAttribute="bottom" constant="25" id="JUu-2L-Zv5"/>
+                                            <constraint firstItem="pLe-WP-G0n" firstAttribute="top" secondItem="Bqv-2X-OpQ" secondAttribute="top" constant="25" id="VN8-f9-bUE"/>
+                                            <constraint firstAttribute="centerX" secondItem="TLl-db-jRW" secondAttribute="centerX" id="atF-PW-dTd"/>
+                                            <constraint firstItem="TLl-db-jRW" firstAttribute="top" secondItem="Bqv-2X-OpQ" secondAttribute="top" id="emu-PH-8Tm"/>
+                                        </constraints>
+                                        <size key="customSize" width="300" height="300"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="pLe-WP-G0n" id="aNU-O9-QCf"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrPhotoHeaderView" id="X2Q-1S-DET" customClass="FlickrPhotoHeaderView">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-bx-mVz">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oR6-In-52E">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                            <color key="textColor" red="0.0078431377190000002" green="0.60784316059999999" blue="0.6784313917" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <connections>
+                                        <outlet property="backgroundImageView" destination="o8X-bx-mVz" id="6mi-h2-yHb"/>
+                                        <outlet property="searchLabel" destination="oR6-In-52E" id="Fxt-Vq-YN3"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="9zz-wZ-Xsh"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ONC-J5-eng"/>
@@ -69,14 +128,65 @@
                         <outlet property="shareButton" destination="g6g-Bz-YlQ" id="RKl-Ya-uvx"/>
                         <outlet property="textField" destination="OAA-Ri-7M6" id="aFp-6c-Q6B"/>
                         <outlet property="toolbar" destination="ifQ-Ws-0hr" id="ihF-CO-PBL"/>
+                        <segue destination="BUC-TO-9ie" kind="modal" identifier="ShowFlickrPhoto" modalPresentationStyle="formSheet" id="mTT-cK-elt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Flickr Photo View Controller-->
+        <scene sceneID="C2Y-bt-tKe">
+            <objects>
+                <viewController id="BUC-TO-9ie" customClass="FlickrPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Er1-Oa-ccT"/>
+                        <viewControllerLayoutGuide type="bottom" id="yyr-4Y-xmC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WQB-gK-WaZ">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="620"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iP5-bO-WFT">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Done" id="U75-k0-uK3">
+                                        <connections>
+                                            <action selector="done:" destination="BUC-TO-9ie" id="PP4-eK-ne8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fIT-89-yp7">
+                                <rect key="frame" x="0.0" y="44" width="540" height="576"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="576" id="PIu-uX-giw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fIT-89-yp7" firstAttribute="trailing" secondItem="iP5-bO-WFT" secondAttribute="trailing" id="85R-OA-h6J"/>
+                            <constraint firstItem="fIT-89-yp7" firstAttribute="leading" secondItem="iP5-bO-WFT" secondAttribute="leading" id="AIr-is-Umi"/>
+                            <constraint firstItem="fIT-89-yp7" firstAttribute="leading" secondItem="WQB-gK-WaZ" secondAttribute="leading" id="AcJ-9S-do8"/>
+                            <constraint firstAttribute="trailing" secondItem="fIT-89-yp7" secondAttribute="trailing" id="QV3-Dr-rVV"/>
+                            <constraint firstItem="fIT-89-yp7" firstAttribute="top" secondItem="iP5-bO-WFT" secondAttribute="bottom" id="ZhC-Fr-Pak"/>
+                            <constraint firstAttribute="bottom" secondItem="fIT-89-yp7" secondAttribute="bottom" id="hdT-JT-TBY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="fIT-89-yp7" id="hcG-iV-iRf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kXz-2r-Mj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="-212"/>
+        </scene>
     </scenes>
     <resources>
         <image name="divider_bar.png" width="697" height="13"/>
+        <image name="pushpin.png" width="22" height="31"/>
         <image name="search_text.png" width="97" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
